@@ -10,11 +10,8 @@ CREATE_GAME_TABLE = (
 CHECK_EXISTING_GAME = "SELECT * FROM games WHERE player_1_username = %s AND player_2_username = %s AND winner is NULL;"
 
 CREATE_GAME = "INSERT INTO games (player_1_username, player_2_username, last_played) values (%s, %s, NOW()) RETURNING id;"
-# CREATE_GAME = "INSERT INTO games (player_1_username, player_2_username, user_1_choice, user_2_choice, winner, last_played) values (%s, %s, %s, %s);"
 
 UPDATE_GAME = "UPDATE games SET (user_1_choice, user_2_choice, winner, last_played) = (%s, %s, %s, NOW()) WHERE id = %s AND winner is NULL RETURNING id;"
-
-CHECK_GAME = "SELECT * FROM games;"
 
 load_dotenv()  # loads variables from .env file into environment
 
@@ -49,8 +46,6 @@ def update_game(id):
         winner = data["winner"] if data["winner"] is not None else None
     else:
         winner = None
-    print(data)
-    print(winner)
     with connection:
         with connection.cursor() as cursor:
             cursor.execute(UPDATE_GAME, (user_1_choice,

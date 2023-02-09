@@ -26,4 +26,5 @@
 
 ## Comment
 
+- It was my first time to create a back-end server with Python.
 - If you have any issue with running the application, feel free to create an issue ticket on repo
