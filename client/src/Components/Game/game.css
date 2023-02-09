@@ -1,0 +1,23 @@
+.game-container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 4em;
+  width: 40em;
+}
+
+.result-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.game-selector {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 12em;
+}
+
+.result-font {
+
+  padding: 0.5em 0 1.5em 0;
+}

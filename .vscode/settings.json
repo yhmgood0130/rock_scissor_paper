@@ -1,0 +1,12 @@
+{
+  "terminal.integrated.profiles.windows": {
+    "GitBash": {
+      "path": ["D:\\ProgramFiles\\Git\\bin\\bash.exe"],
+      "args": []
+    },
+  },
+  "terminal.integrated.defaultProfile.windows": "GitBash",
+  "git.terminalGitEditor": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true
+}
